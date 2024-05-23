@@ -24,6 +24,31 @@ body {
     color: #d9dcd6;
 }
 
+.seo {
+    position: relative;
+}
+
+.seo::after {
+    content: "Search Engine Optimization";
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: -70%;
+    font-size: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+.seo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .header div {
     padding-top: 15px;
     margin-right: 20px;
@@ -46,10 +71,6 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
-
 .hero {
     height: 800px;
     width: 100%;
@@ -59,10 +80,16 @@ p {
     background-position: center;
 }
 
+p {
+    font-size: 16px;
+}
+
 .float-left {
     float: left;
     margin-right: 25px;
 }
+
+
 
 .float-right {
     float: right;
